@@ -1,0 +1,194 @@
+
+wzx02@LAPTOP-R52VCQHR MINGW32 ~/OneDrive/Bureau (master)
+$ mkdir learn_git_again
+
+wzx02@LAPTOP-R52VCQHR MINGW32 ~/OneDrive/Bureau (master)
+$ cd learn_git_again/
+
+wzx02@LAPTOP-R52VCQHR MINGW32 ~/OneDrive/Bureau/learn_git_again (master)
+$ Echo > third.txt
+
+wzx02@LAPTOP-R52VCQHR MINGW32 ~/OneDrive/Bureau/learn_git_again (master)
+$ git init
+Initialized empty Git repository in C:/Users/wzx02/OneDrive/Bureau/learn_git_aga                                                                                                                                  in/.git/
+
+wzx02@LAPTOP-R52VCQHR MINGW32 ~/OneDrive/Bureau/learn_git_again (master)
+$ git add .
+warning: LF will be replaced by CRLF in third.txt.
+The file will have its original line endings in your working directory.
+
+wzx02@LAPTOP-R52VCQHR MINGW32 ~/OneDrive/Bureau/learn_git_again (master)
+$ git commit -m "adding third.txt"
+[master (root-commit) a5abe5e] adding third.txt
+ 1 file changed, 1 insertion(+)
+ create mode 100644 third.txt
+
+wzx02@LAPTOP-R52VCQHR MINGW32 ~/OneDrive/Bureau/learn_git_again (master)
+$ git log
+=: =: command not found
+
+wzx02@LAPTOP-R52VCQHR MINGW32 ~/OneDrive/Bureau/learn_git_again (master)
+$ git log
+=: =: command not found
+
+wzx02@LAPTOP-R52VCQHR MINGW32 ~/OneDrive/Bureau/learn_git_again (master)
+$ Echo > fourth.txt
+
+wzx02@LAPTOP-R52VCQHR MINGW32 ~/OneDrive/Bureau/learn_git_again (master)
+$ git add .
+warning: LF will be replaced by CRLF in fourth.txt.
+The file will have its original line endings in your working directory.
+
+wzx02@LAPTOP-R52VCQHR MINGW32 ~/OneDrive/Bureau/learn_git_again (master)
+$ git rm third.txt
+rm 'third.txt'
+
+wzx02@LAPTOP-R52VCQHR MINGW32 ~/OneDrive/Bureau/learn_git_again (master)
+$ git add .
+
+wzx02@LAPTOP-R52VCQHR MINGW32 ~/OneDrive/Bureau/learn_git_again (master)
+$ git commit -m "removing fourth"
+[master 2bfdbc7] removing fourth
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ rename third.txt => fourth.txt (100%)
+
+wzx02@LAPTOP-R52VCQHR MINGW32 ~/OneDrive/Bureau/learn_git_again (master)
+$ git log
+=: =: command not found
+
+wzx02@LAPTOP-R52VCQHR MINGW32 ~/OneDrive/Bureau/learn_git_again (master)
+$ git config --global core.pager ''
+warning: core.pager has multiple values
+error: cannot overwrite multiple values with a single value
+       Use a regexp, --add or --replace-all to change core.pager.
+
+wzx02@LAPTOP-R52VCQHR MINGW32 ~/OneDrive/Bureau/learn_git_again (master)
+$ git config --global core.pager 'cat'
+warning: core.pager has multiple values
+error: cannot overwrite multiple values with a single value
+       Use a regexp, --add or --replace-all to change core.pager.
+
+wzx02@LAPTOP-R52VCQHR MINGW32 ~/OneDrive/Bureau/learn_git_again (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+wzx02@LAPTOP-R52VCQHR MINGW32 ~/OneDrive/Bureau/learn_git_again (master)
+$ git config --list --shaow origin
+error: unknown option `shaow'
+usage: git config [<options>]
+
+Config file location
+    --global              use global config file
+    --system              use system config file
+    --local               use repository config file
+    -f, --file <file>     use given config file
+    --blob <blob-id>      read config from given blob object
+
+Action
+    --get                 get value: name [value-regex]
+    --get-all             get all values: key [value-regex]
+    --get-regexp          get values for regexp: name-regex [value-regex]
+    --get-urlmatch        get value specific for the URL: section[.var] URL
+    --replace-all         replace all matching variables: name value [value_rege                                                                                                                                  x]
+    --add                 add a new variable: name value
+    --unset               remove a variable: name [value-regex]
+    --unset-all           remove all matches: name [value-regex]
+    --rename-section      rename section: old-name new-name
+    --remove-section      remove a section: name
+    -l, --list            list all
+    -e, --edit            open an editor
+    --get-color           find the color configured: slot [default]
+    --get-colorbool       find the color setting: slot [stdout-is-tty]
+
+Type
+    --bool                value is "true" or "false"
+    --int                 value is decimal number
+    --bool-or-int         value is --bool or --int
+    --path                value is a path (file or directory name)
+    --expiry-date         value is an expiry date
+
+Other
+    -z, --null            terminate values with NUL byte
+    --name-only           show variable names only
+    --includes            respect include directives on lookup
+    --show-origin         show origin of config (file, standard input, blob, com                                                                                                                                  mand line)
+
+
+wzx02@LAPTOP-R52VCQHR MINGW32 ~/OneDrive/Bureau/learn_git_again (master)
+$ git config --global core.pager = 'cat'
+
+wzx02@LAPTOP-R52VCQHR MINGW32 ~/OneDrive/Bureau/learn_git_again (master)
+$ got config --global --list
+bash: got: command not found
+
+wzx02@LAPTOP-R52VCQHR MINGW32 ~/OneDrive/Bureau/learn_git_again (master)
+$ git config --global --list
+user.email=wajihamara@yahoo.com
+user.name=wajihamara
+filter.lfs.clean=git-lfs clean -- %f
+filter.lfs.smudge=git-lfs smudge -- %f
+filter.lfs.process=git-lfs filter-process
+filter.lfs.required=true
+core.pager==
+core.pager==
+core.pager==
+
+wzx02@LAPTOP-R52VCQHR MINGW32 ~/OneDrive/Bureau/learn_git_again (master)
+$ git config --global core.pager == 'cat'
+
+wzx02@LAPTOP-R52VCQHR MINGW32 ~/OneDrive/Bureau/learn_git_again (master)
+$ git config --global --list
+user.email=wajihamara@yahoo.com
+user.name=wajihamara
+filter.lfs.clean=git-lfs clean -- %f
+filter.lfs.smudge=git-lfs smudge -- %f
+filter.lfs.process=git-lfs filter-process
+filter.lfs.required=true
+core.pager==
+core.pager==
+core.pager==
+core.pager===
+
+wzx02@LAPTOP-R52VCQHR MINGW32 ~/OneDrive/Bureau/learn_git_again (master)
+$ git commit -m "first commit
+> git commit -m "first commit"
+> git add .
+> git config --global --list
+> ^C
+
+
+wzx02@LAPTOP-R52VCQHR MINGW32 ~/OneDrive/Bureau/learn_git_again (master)
+$ git add .
+
+wzx02@LAPTOP-R52VCQHR MINGW32 ~/OneDrive/Bureau/learn_git_again (master)
+$ git commit -m "checkpoint commit"
+On branch master
+nothing to commit, working tree clean
+
+wzx02@LAPTOP-R52VCQHR MINGW32 ~/OneDrive/Bureau/learn_git_again (master)
+$ git branch -M main
+
+wzx02@LAPTOP-R52VCQHR MINGW32 ~/OneDrive/Bureau/learn_git_again (main)
+$ git remote add origin https://github.com/wajihamara/git-chekpoint. git
+usage: git remote add [<options>] <name> <url>
+
+    -f, --fetch           fetch the remote branches
+    --tags                import all tags and associated objects when fetching
+                          or do not fetch any tag at all (--no-tags)
+    -t, --track <branch>  branch(es) to track
+    -m, --master <branch>
+                          master branch
+    --mirror[=<push|fetch>]
+                          set up remote as a mirror to push to or fetch from
+
+
+wzx02@LAPTOP-R52VCQHR MINGW32 ~/OneDrive/Bureau/learn_git_again (main)
+$  git push -u origin main
+fatal: 'origin' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+wzx02@LAPTOP-R52VCQHR MINGW32 ~/OneDrive/Bureau/learn_git_again (main)
